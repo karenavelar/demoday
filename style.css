@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    overflow-x: hidden;
+}
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+    "container section section section"
+    "container left center right"
+    "footer footer footer footer";
+    background-image: url('assets/img1.jpg');
+    background-size: 100%;
+}
+header{
+    opacity: 0.5;
+    grid-area: header;
+    height: 200px;
+    background-color: black;
+}
+.container{
+    grid-area: container;
+    display: grid;
+    grid-template-areas: "um"
+    "dois"
+    "tres"
+    "quatro"
+    "cinco";
+    height: 500px;
+    background-color: greenyellow;
+}
+.um{
+    grid-area: um;
+    border-bottom: 5pt solid whitesmoke;
+}
+.dois{
+    grid-area: dois;
+    border-bottom: 5pt solid whitesmoke;
+}
+.tres{
+    grid-area: tres;
+    border-bottom: 5pt solid whitesmoke;
+}
+.quatro{
+    grid-area: quatro;
+    border-bottom: 5pt solid whitesmoke;
+}
+.cinco{
+    grid-area: cinco;
+    border-bottom: 5pt solid whitesmoke;
+}
+section{
+    margin-top: 10pt;
+    margin-left: 05pt;
+    margin-right: 05pt;
+    opacity: 0.4;
+    grid-area: section;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+#left{
+    margin: 05pt;
+    opacity: 0.4;
+    grid-area: left;
+    height: 200px;
+    background-color: #CCCCCC;
+}
+#center{
+    margin: 05pt;
+    opacity: 0.4;
+    height: 200px;
+    grid-area: center;
+    color: whitesmoke;
+    background-color: #000000
+}
+#right{
+    margin: 05pt;
+    opacity: 0.4;
+    height: 200px;
+    grid-area: right;
+    background-color: #8E8E8E;
+}
+footer{
+    margin-top: 05pt;
+    opacity: 0.4;
+    height: 300px;
+    grid-area: footer;
+    background-color: #8E8E8E;
+}
+@media (max-width: 425px){
+    body{
+        display: grid;
+        grid-template-areas: "header header header header"
+        "section section section section"
+        "left left center right"
+        "footer footer footer footer";
+        /* grid-auto-rows: 50px 100px 100px 80px; */
+    }
+    .container{
+        display: none;
+        }
+    }
