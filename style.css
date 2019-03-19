@@ -1,21 +1,30 @@
-*{
+body{
+
     margin: 0;
     overflow-x: hidden;
+    background-color: #676b6d;
 }
-body{
+.main{
     display: grid;
     grid-template-areas: "header header header header"
     "container section section section"
     "container left center right"
     "footer footer footer footer";
-    background-image: url('assets/img1.jpg');
+    /* grid-auto-rows: 100px 100px 100px 100px 250px 100px 80px; */
+    /* background-image: url('assets/img1.jpg'); */
     background-size: 100%;
 }
 header{
-    opacity: 0.5;
     grid-area: header;
-    height: 200px;
-    background-color: black;
+    display: flex;
+    opacity: 0.5;
+    height: 400px;
+    width: 100vw;
+    /* background-image: url("img/xbox.jpg"); */
+    background-repeat: no-repeat;
+    color: aliceblue;
+    justify-content: space-around;
+
 }
 .container{
     grid-area: container;
@@ -26,9 +35,13 @@ header{
     "quatro"
     "cinco";
     height: 500px;
-    background-color: greenyellow;
+    /* width: 200px; */
+    background-color:#FF004E;
 }
-.um{
+.ancoras{
+
+}
+/* .um{
     grid-area: um;
     border-bottom: 5pt solid whitesmoke;
 }
@@ -47,28 +60,33 @@ header{
 .cinco{
     grid-area: cinco;
     border-bottom: 5pt solid whitesmoke;
-}
+} */
 section{
     margin-top: 10pt;
     margin-left: 05pt;
     margin-right: 05pt;
     opacity: 0.4;
     grid-area: section;
-    height: 200px;
+    /* height: 200px; */
     background-color: blueviolet;
 }
-
+/* section img{
+    width: 90%;
+    max-width: 530px;
+    height: auto;
+    max-height: 90%;
+} */
 #left{
     margin: 05pt;
     opacity: 0.4;
     grid-area: left;
-    height: 200px;
+    /* height: 200px; */
     background-color: #CCCCCC;
 }
 #center{
     margin: 05pt;
     opacity: 0.4;
-    height: 200px;
+    /* height: 200px; */
     grid-area: center;
     color: whitesmoke;
     background-color: #000000
@@ -76,25 +94,31 @@ section{
 #right{
     margin: 05pt;
     opacity: 0.4;
-    height: 200px;
+    /* height: 200px; */
     grid-area: right;
     background-color: #8E8E8E;
 }
 footer{
     margin-top: 05pt;
     opacity: 0.4;
-    height: 300px;
+    /* height: 300px; */
     grid-area: footer;
     background-color: #8E8E8E;
 }
 @media (max-width: 425px){
     body{
         display: grid;
-        grid-template-areas: "header header header header"
-        "section section section section"
-        "left left center right"
-        "footer footer footer footer";
-        /* grid-auto-rows: 50px 100px 100px 80px; */
+        grid-template-areas: "header header header"
+        "section section section"
+        "left left left"
+        "footer footer footer";
+        grid-auto-rows: 100px 150px 150px 80px;
+    }
+    #center{
+        display: nome;
+    }
+    #right{
+        display: nome;
     }
     .container{
         display: none;
